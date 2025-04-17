@@ -2,41 +2,90 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Directum RX</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Flow</title>
   <style>
     body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
       margin: 0;
-      background-color: #f0f2f5;
-      font-family: Arial, sans-serif;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://cdn.pixabay.com/photo/2017/11/01/00/27/arrow-2900191_960_720.png'), linear-gradient(135deg, #6e7dff, #4b82b3); /* Стрелочки как фон */
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      animation: fadeIn 1s ease-in-out;
     }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: scale(0.8); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
     .container {
       text-align: center;
+      padding: 40px;
+      background-color: rgba(0, 0, 0, 0.6); /* Прозрачный фон для контейнера */
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 1.5s ease-in-out;
+      background-image: url('https://www.transparenttextures.com/patterns/diagonal-stripes-light.png');
     }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 30px;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+      color: #f3f3f3;
+    }
+
     .button {
       display: inline-block;
-      margin-top: 20px;
-      padding: 15px 30px;
-      background-color: #0078D4;
-      color: white;
-      font-size: 18px;
+      padding: 20px 50px;
+      font-size: 20px;
+      color: #fff;
+      background-color: #0078d4;
       text-decoration: none;
-      border-radius: 8px;
-      transition: background-color 0.3s;
+      border-radius: 50px; /* Круглая кнопка */
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transform: scale(1);
     }
+
     .button:hover {
       background-color: #005a9e;
+      transform: scale(1.05); /* Эффект всплеска */
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
     }
+
+    .button:active {
+      transform: scale(0.98); /* Эффект нажатия */
+    }
+
+    /* Для мобильных устройств */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .button {
+        font-size: 16px;
+        padding: 15px 40px;
+      }
+    }
+
   </style>
 </head>
 <body>
+
   <div class="container">
-    <h1>Welcome to Directum RX</h1>
-    <p>Click the button below to open Directum RX in a new window.</p>
+    <h1>Document Flow</h1>
     <a class="button" href="https://rx.intermark.global" target="_blank">Open Directum RX</a>
   </div>
+
 </body>
 </html>
